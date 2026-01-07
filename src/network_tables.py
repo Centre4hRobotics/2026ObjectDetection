@@ -35,7 +35,10 @@ class NetworkTables:
         # Angle
         self.best_object_angle = self.table.getDoubleTopic("Object Angle").publish()
 
-    def set_values(self, count: int, bounding_box: tuple[list[SupportsInt], list[SupportsInt]], angle: float) -> None:
+    def set_values(self,
+                   count: int,
+                   bounding_box: tuple[list[SupportsInt], list[SupportsInt]],
+                   angle: float) -> None:
         """ Write values to network tables """
 
         self.object_count.set(count)
